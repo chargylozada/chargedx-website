@@ -199,11 +199,33 @@ footer{padding:26px 20px;border-top:1px solid var(--line);display:flex;flex-wrap
 .paths span{display:block;margin-top:6px;font-size:.95rem;color:#ddd}
 .hero .sub{margin-bottom:22px}
 @media (max-width:640px){.paths{grid-template-columns:1fr}}
+.bk .head{margin-bottom:28px}
+.bk-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px}
+.lbl{font:700 1rem var(--d);color:var(--dk-txt);margin-bottom:12px}.lbl span{font:500 .88rem var(--b);color:var(--dk-mut)}
+.chipsel{display:flex;flex-wrap:wrap;gap:10px}
+.chipsel button{min-height:48px;padding:10px 16px;border:2px solid var(--lt-line);background:#fff;border-radius:8px;font:600 .98rem var(--b);color:var(--dk-txt);cursor:pointer}
+.chipsel button:hover{border-color:#999}
+.chipsel button[aria-checked=true]{background:var(--red);border-color:var(--red);color:#fff}
+.bkf label{display:block;font:600 .95rem var(--b);color:var(--dk-txt);margin-bottom:14px}
+.bkf .opt{font-weight:500;color:var(--dk-mut)}
+.bkf input,.bkf textarea{display:block;width:100%;margin-top:6px;padding:13px 14px;border:2px solid var(--lt-line);border-radius:8px;font:500 1rem var(--b);background:#fff;color:var(--dk-txt)}
+.bkf input:focus,.bkf textarea:focus{outline:none;border-color:var(--red)}
+.bmsg{margin-top:14px;font-weight:600;color:var(--dk-txt)}.bmsg.err{color:var(--red)}
+.chipsel .none{color:var(--dk-mut)}
+@media (max-width:900px){.bk-grid{grid-template-columns:1fr;gap:26px}.bk .head{text-align:left}}
+.bkframe{background:#fff;border:1px solid var(--lt-line);border-radius:12px;overflow:hidden}.bkframe iframe{display:block;width:100%;height:720px;border:0}.bkalt{margin-top:16px;font-size:.98rem;color:var(--dk-mut)}.bkalt a{color:var(--red);font-weight:700}
+@media (max-width:640px){.bkframe iframe{height:820px}}
+.bkcard{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#fff;border:1px solid var(--lt-line);border-top:3px solid var(--red);border-radius:12px;padding:24px 26px;margin-bottom:18px}
+.bkcard h3{margin:0 0 8px;font-size:1.35rem;color:var(--dk-txt)}
+.bkmeta{list-style:none;margin:0;padding:0;color:var(--dk-mut);font-size:1rem;display:grid;gap:4px}
+.bkmeta li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:10px}
+.bkframe[hidden]{display:none}
+@media (max-width:640px){.bkcard .btn{width:100%}}
 </style>
 </head>
 <body>
 <nav><div class="bar"><a class="logo" href="#top">Charged<b>X</b></a>
-<div class="menu" id="menu"><a href="#services">Services</a><a href="#compare">Why outsource</a><a href="#results">Results</a><a href="#about">About</a><a class="cta-n" href="#contact">Book a call</a></div>
+<div class="menu" id="menu"><a href="#services">Services</a><a href="#compare">Why outsource</a><a href="#results">Results</a><a href="#about">About</a><a class="cta-n" href="#book">Book a call</a></div>
 <button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="menu">Menu</button></div></nav>
 
 <main id="top">
@@ -213,7 +235,7 @@ footer{padding:26px 20px;border-top:1px solid var(--line);display:flex;flex-wrap
   <h1>Outsourced SDRs and sales coaching that <em>fill your calendar.</em></h1>
   <p class="sub">Is your pipeline thin, or is your team not closing? We help you sell smarter, grow faster and close bigger deals. Choose the path that fits where you are.</p>
   <div class="paths"><a href="#services"><small>Need people doing the outreach?</small><b>Outsourced SDRs and lead generation</b><span>Full-time team, hiring included</span></a><a href="#services"><small>Need guidance, not a team?</small><b>Fractional sales consultant and coach</b><span>Strategy, training and pipeline reviews</span></a></div>
-  <div class="row"><a class="btn" href="#contact">Book a call</a><a class="btn ghost" href="#services">See what we do</a></div>
+  <div class="row"><a class="btn" href="#book">Book a call</a><a class="btn ghost" href="#services">See what we do</a></div>
  </div>
  <figure class="vid"><video controls preload="none" playsinline poster="img-poster-hook.webp" aria-label="Intro video"><source src="blueprint.mp4" type="video/mp4"></video></figure>
 </div></section>
@@ -238,7 +260,7 @@ footer{padding:26px 20px;border-top:1px solid var(--line);display:flex;flex-wrap
   <div class="card"><div class="tag2">3 · Customer success hub</div><h3>Virtual assistants (VA)</h3><p>Dedicated VA agents who look after your customers and your admin, so your team can sell.</p><ul><li>Customer service and retention</li><li>Tailored client strategies</li><li>Virtual assistance and admin tasks</li></ul></div>
   <div class="card" id="setup"><div class="tag2">4 · UAE business setup</div><h3>ChargedX Biz-Consult</h3><p>Where it helps, we guide you through setting up in the UAE, remotely if you prefer.</p><ul><li>Mainland, free zone and offshore setup</li><li>Visas, residency and Emirates ID</li><li>Accounting, VAT and corporate tax</li></ul><a class="btn sm" href="https://wa.me/971525533934?text=Hi%2C%20I%20need%20help%20setting%20up%20in%20the%20UAE" target="_blank" rel="noopener">Free consultation</a></div>
  </div>
- <div class="row" style="margin-top:28px"><a class="btn" href="#contact">Get a quote</a></div>
+ <div class="row" style="margin-top:28px"><a class="btn" href="#book">Get a quote</a></div>
 </div></section>
 
 <section id="compare"><div class="wrap">
@@ -252,7 +274,7 @@ footer{padding:26px 20px;border-top:1px solid var(--line);display:flex;flex-wrap
   <div class="cr" role="row"><div role="rowheader">Flexibility</div><div role="cell"><span class="m">In-house</span>Hard to scale up or down quickly.</div><div role="cell" class="us"><span class="m">ChargedX</span>Team size can change as your needs change.</div></div>
   <div class="cr" role="row"><div role="rowheader">Risk</div><div role="cell"><span class="m">In-house</span>A poor hire costs months and money, and you carry it.</div><div role="cell" class="us"><span class="m">ChargedX</span>We handle hiring and team management, so you are not carrying it alone.</div></div>
  </div>
- <div class="row" style="margin-top:26px"><a class="btn" href="#contact">Book a call</a></div>
+ <div class="row" style="margin-top:26px"><a class="btn" href="#book">Book a call</a></div>
 </div></section>
 
 <section id="process"><div class="wrap">
@@ -323,6 +345,13 @@ footer{padding:26px 20px;border-top:1px solid var(--line);display:flex;flex-wrap
  <div><p class="eyebrow">Free sales playbook</p><h2>Cold to Closed</h2><p>Your friendly guide to learning sales: how to communicate, approach prospects, handle objections and close, using a simple system you can apply straight away.</p><a class="btn white" href="https://chargylozada.gumroad.com/l/chargybooks" target="_blank" rel="noopener">Get the free playbook</a></div>
 </div></section>
 
+<section class="light" id="book"><div class="wrap bk">
+ <div class="head"><p class="eyebrow">Book a call</p><h2>Pick a time for a short discovery call.</h2><p>30 minutes, no pressure. Choose a day and time and you will get a confirmation email with a Google Meet link. Times are shown in your local time.</p></div>
+ <div class="bkcard"><div><h3>ChargedX Discovery Call</h3><ul class="bkmeta"><li>30 minutes</li><li>Google Meet link in your confirmation email</li><li>Monday to Friday, shown in your local time</li></ul></div><a class="btn" href="https://calendar.app.google/CTBVv8GWcELr8U4e9" target="_blank" rel="noopener">Choose a time</a></div>
+ <div class="bkframe" id="bkframe" hidden></div>
+ <p class="bkalt">Prefer to message? <a href="https://wa.me/971525533934" target="_blank" rel="noopener">WhatsApp us</a> or <a href="mailto:chargylozada@chargedx.co?subject=Discovery%20call">send an email</a>.</p>
+</div></section>
+
 <section class="contact" id="contact"><div class="wrap">
  <p class="eyebrow">Get in touch</p><h2>Let’s talk about your sales goals.</h2>
  <p style="margin-top:14px">Tell us about your market and offer. We will tell you honestly if we can help.</p>
@@ -343,6 +372,10 @@ function sl(t,p,n){var T=document.getElementById(t);if(!T)return;function mv(d){
 document.getElementById(p).onclick=function(){mv(-1)};document.getElementById(n).onclick=function(){mv(1)}}
 sl('gt','gp','gn');sl('it','ip','in');
 })();
+</script>
+<script>
+(function(){var h=location.hostname,f=document.getElementById('bkframe');if(!f||!/(^|\.)chargedx\.co$/.test(h))return;
+var i=document.createElement('iframe');i.src='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qgnUnmnnyO7FdabhOyHyHh6KWTXGQxdowTXMYjgrjCQ4b0YUokwSk_HC-1EOeFD6-FnZ1hctK?gv=true';i.title='Book a discovery call';i.loading='lazy';i.setAttribute('frameborder','0');f.appendChild(i);f.hidden=false})();
 </script>
 </body>
 </html>
